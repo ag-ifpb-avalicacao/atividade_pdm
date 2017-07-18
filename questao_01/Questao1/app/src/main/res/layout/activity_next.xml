@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.juan.questao1.NextActivity">
+
+    <Button
+        android:id="@+id/listview"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_x="112dp"
+        android:layout_y="207dp"
+        android:text="ListView"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/tabela"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_x="112dp"
+        android:layout_y="306dp"
+        android:text="Table"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="28dp"
+        android:layout_y="444dp"
+        android:text=""
+        android:textSize="25sp"/>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_x="90dp"
+        android:layout_y="38dp"
+        android:text="Tomada"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/texttomada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="142dp"
+        android:layout_y="126dp"
+        android:text="Apagado"
+        android:textSize="25sp" />
+
+
+</AbsoluteLayout>

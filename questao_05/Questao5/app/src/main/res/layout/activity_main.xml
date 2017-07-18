@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.juan.questao5.MainActivity">
+
+    <LinearLayout
+        android:layout_marginTop="180dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/pessoa1"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:text="pessoa 1"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/pessoa2"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:text="pessoa 2"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>
