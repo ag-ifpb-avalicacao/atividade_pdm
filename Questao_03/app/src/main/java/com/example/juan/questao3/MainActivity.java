@@ -40,12 +40,15 @@ public class MainActivity extends AppCompatActivity {
         buscar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                if(verificaConexao()) {
                     //verifica se o texto possui o tamanho correto
                     if (!(input.getText().toString().length() < 8))
                         //chama a asynctask passando a url com o cep informado
                         new ChamarCepWS().execute("http://viacep.com.br/ws/" + input.getText().toString() + "/json/");
                     else
                         Toast.makeText(getApplicationContext(), "um cep possui 8 caracteres", Toast.LENGTH_LONG).show();
+                }else
+                    Toast.makeText(MainActivity.this, "voce nao esta conectado a internet", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -86,4 +89,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public  boolean verificaConexao() {
+        boolean conectado;
+        ConnectivityManager conectivtyManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (conectivtyManager.getActiveNetworkInfo() != null
+                && conectivtyManager.getActiveNetworkInfo().isAvailable()
+                && conectivtyManager.getActiveNetworkInfo().isConnected()) {
+            conectado = true;
+        } else {
+            conectado = false;
+        }
+        return conectado;
+    }
 }
